@@ -87,11 +87,11 @@ $(info   OUT_DIR=$(OUT_DIR))
 ifneq ($(RECOVERY_VARIANT),)
 $(info   RECOVERY_VARIANT=$(RECOVERY_VARIANT))
 endif
-ifneq (,$(filter true, $(CYNGN_TARGET) $(EXTERNAL_CLEAN_TARGET)))
-ifeq ($(CYNGN_TARGET), true)
-$(info   CYNGN_TARGET=$(CYNGN_TARGET))
+ifeq ($(WITH_SU),true)
+$(info   WITH_SU=$(WITH_SU))
 endif
-$(info   CYNGN_FEATURES=$(CYNGN_FEATURES))
+ifeq ($(WITH_GMS),true)
+$(info   WITH_GMS=$(WITH_GMS))
 endif
 $(info ============================================)
 endif
